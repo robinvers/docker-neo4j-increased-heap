@@ -3,6 +3,8 @@ FROM openjdk:8-jre-alpine
 RUN apk add --no-cache --quiet \
     bash \
     curl
+	
+COPY ./local-package/* /tmp/
 
 ENV NEO4J_SHA256 47317a5a60f72de3d1b4fae4693b5f15514838ff3650bf8f2a965d3ba117dfc2
 ENV NEO4J_TARBALL neo4j-community-3.1.0-unix.tar.gz
